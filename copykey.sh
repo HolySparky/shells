@@ -17,7 +17,8 @@ shift
 
 for i in $@; do
     host=$i
-    if ssh $user@$host test -d ~/.ssh; then
+    if ssh $user@$host test -f ~/.ssh
+    then
         echo "remote folder exists"
         cat ~/.ssh/id_rsa.pub | ssh $user@$host " cat >> ~/.ssh/authorized_keys"
     else

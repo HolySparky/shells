@@ -1,0 +1,6 @@
+http_proxy="http://jackfan.com:4000/"
+https_proxy="http://jackfan.com:4000/"
+ftp_proxy="http://jackfan.com:4000/"
+HTTP_PROXY="http://jackfan.com:4000/"
+HTTPS_PROXY="http://jackfan.com:4000/"
+FTP_PROXY="http://jackfan.com:4000/"
