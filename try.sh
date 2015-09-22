@@ -1,0 +1,2 @@
+AJ='aa'
+echo $AJ

@@ -1,9 +1,13 @@
-echo 'http_proxy="http://jackfan.com:4000/"
-https_proxy="http://jackfan.com:4000/"
-ftp_proxy="http://jackfan.com:4000/"
-HTTP_PROXY="http://jackfan.com:4000/"
-HTTPS_PROXY="http://jackfan.com:4000/"
-FTP_PROXY="http://jackfan.com:4000/"'>> etc/environment
-git config --global http.proxy http://jackfan.com:4000/
-export http_proxy="http://jackfan.com:4000/"
-export HTTP_PROXY="http://jackfan.com:4000/"
+# Please change PROXY_URL and PROXY_PORT to your own proxy setting
+PROXY_URL = 'myproxy.com'
+PROXY_PORT = 8080
+
+echo 'http_proxy="http://$PROXY_URL:$PROXY_PORT/"
+https_proxy="http://$PROXY_URL:$PROXY_PORT/"
+ftp_proxy="http://$PROXY_URL:$PROXY_PORT/"
+HTTP_PROXY="http://$PROXY_URL:$PROXY_PORT/"
+HTTPS_PROXY="http://$PROXY_URL:$PROXY_PORT/"
+FTP_PROXY="http://$PROXY_URL:$PROXY_PORT/"'>> etc/environment
+git config --global http.proxy http://$PROXY_URL:$PROXY_PORT/
+export http_proxy="http://$PROXY_URL:$PROXY_PORT/"
+export HTTP_PROXY="http://$PROXY_URL:$PROXY_PORT/"
